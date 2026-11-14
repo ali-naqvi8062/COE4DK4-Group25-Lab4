@@ -1,0 +1,19 @@
+{
+  "experiment": "5",
+  "seed_set": [
+    400450701,
+    400327698,
+    400336020,
+    104729,
+    130363
+  ],
+  "jobs": 325,
+  "source_sha256": "f8027a929fa48b29c79f14e994249fca8a3bffe5264cf3e2c1c8415e0e002df2",
+  "elapsed_seconds": 14.28,
+  "compiler": "gcc -std=c11 -O2 -Wall -Wextra -Wpedantic -Werror",
+  "data_packet_bits": 1000,
+  "link_rate_bps": 1000000,
+  "one_way_propagation_ms": 5,
+  "ack_transmission_ms": 0,
+  "processing_ms": 0
+}
