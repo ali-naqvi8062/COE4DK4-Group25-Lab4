@@ -1,0 +1,5 @@
+Event,State change
+Transmission end,Free the data link so another packet can start.
+Data arrival,"Apply a data error trial. If valid, accept, buffer, or discard the packet; generate the appropriate ACK."
+ACK arrival,"Mark acknowledged data, advance the send base, and cancel pending retries where possible."
+Timeout,"Queue one packet for SR, or all outstanding packets in sequence order for GBN."

@@ -31,6 +31,37 @@ On Linux or macOS use `build/arq`. Omit `--n` for a backlogged run.
 Use `--trace` to write event CSV to stderr; the result JSON is written to stdout.
 The model and timer assumptions are documented in `docs/design.md`.
 
+## Experiments and report
+
+Run each experiment separately, then plot its saved measurements:
+
+```text
+python scripts/experiments.py 2
+python scripts/plots.py 2
+```
+
+Repeat for `3a`, `3b`, `4`, `5`, `6`, and `7`. Each run saves seed-level data
+and the simulator source hash in `results/experiment*/`. Plotting writes
+summary CSV files and PNG/PDF figures with connected measured points and
+95% confidence intervals. The independent replications use the same seed set
+for every protocol.
+
+```text
+python scripts/reliability.py
+python scripts/report.py
+python scripts/audit.py
+python scripts/package.py
+```
+
+The report is `output/pdf/COE4DK4_Group25_Lab4_Report.pdf`. Its Markdown copy
+and generator are included for editing. Report tables are also saved as CSV
+files under `tables/`. The separate submission archive is
+`output/COE4DK4_Group25_Lab4_Code.zip`.
+
+See `docs/requirements_checklist.md` for the mapping from the lab manual to
+the results and report pages. The report uses the Lab 3 title-page style,
+Times text, numbered figure captions, and experiment-based organization.
+
 ## Group workflow
 
 Create a branch for each change, commit related changes together, and use a

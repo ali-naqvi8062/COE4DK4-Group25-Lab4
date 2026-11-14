@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "experiment_seed_jobs": {
+    "2": 70,
+    "3a": 230,
+    "3b": 350,
+    "4": 225,
+    "5": 325,
+    "6": 770,
+    "7": 1540
+  },
+  "total_seed_jobs": 3510,
+  "report_pages": 25,
+  "report_figures": 17,
+  "report_tables": 9,
+  "source_sha256": "f8027a929fa48b29c79f14e994249fca8a3bffe5264cf3e2c1c8415e0e002df2",
+  "automated_tests": 10
+}

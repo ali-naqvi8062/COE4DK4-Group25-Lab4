@@ -1,0 +1,7 @@
+Protocol,pd=pa,Attempts,Data losses,ACK losses,End (ms)
+SW,0,4,0,0,44
+SW,0.5,21,11,6,299
+GBN,0,4,0,0,14
+GBN,0.5,21,11,6,101
+SR,0,4,0,0,14
+SR,0.5,21,11,6,164
