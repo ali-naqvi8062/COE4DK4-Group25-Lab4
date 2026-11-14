@@ -1,0 +1,25 @@
+# Local course references
+/coe4dk4_lab_4_2026.pdf
+/COE4DK4_Group25_Lab3_Report.pdf
+
+# Temporary files and build output
+/tmp/
+/build/
+*.o
+*.obj
+*.exe
+*.pdb
+*.ilk
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local settings and credentials
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
