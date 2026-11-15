@@ -49,10 +49,10 @@ for protocol in ["sw","gbn","sr"]:
             assert any(r["event"] == "ACK_LOSS" for r in rows)
 
 doc = pymupdf.open(ROOT / "output/pdf/COE4DK4_Group25_Lab4_Report.pdf")
-assert len(doc) == 25
+assert len(doc) == 12
 text = "\n".join(p.get_text() for p in doc)
-assert set(map(int,re.findall(r"Figure (\d+)\.",text))) == set(range(1,18))
-assert set(map(int,re.findall(r"Table (\d+)\.",text))) == set(range(1,10))
+assert set(map(int,re.findall(r"Figure (\d+)\.",text))) == set(range(1,14))
+assert set(map(int,re.findall(r"Table (\d+)\.",text))) == set(range(1,3))
 assert not any(x in text for x in ["\u2014", "\u2013", "\ufffd", "TODO", "PLACEHOLDER"])
 for page in doc:
     for block in page.get_text("dict")["blocks"]:
@@ -64,7 +64,7 @@ for line in (ROOT / "output/pdf/COE4DK4_Group25_Lab4_Report.md").read_text(encod
         assert (ROOT / "output/pdf" / path).is_file()
 
 result = dict(passed=True, experiment_seed_jobs=counts, total_seed_jobs=sum(counts.values()),
-              report_pages=len(doc), report_figures=17, report_tables=9,
+              report_pages=len(doc), report_figures=13, report_tables=2,
               source_sha256=source_hash, automated_tests=tests["tests"])
 (ROOT / "results/audit.json").write_text(json.dumps(result,indent=2)+"\n")
 print(json.dumps(result,indent=2))

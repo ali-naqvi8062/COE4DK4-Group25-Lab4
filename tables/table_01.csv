@@ -1,5 +1,9 @@
-Event,State change
-Transmission end,Free the data link so another packet can start.
-Data arrival,"Apply a data error trial. If valid, accept, buffer, or discard the packet; generate the appropriate ACK."
-ACK arrival,"Mark acknowledged data, advance the send base, and cancel pending retries where possible."
-Timeout,"Queue one packet for SR, or all outstanding packets in sequence order for GBN."
+Experiment,Varied,Fixed settings
+1,"(pd,pa)=(0,0), (0.5,0.5)","N=4; S&W (1,1), GBN (4,1), SR (4,4); seed 400450701"
+2,"Ws; SR Wr=2,8,32",pd=pa=0
+3(a),"pd; SR Wr=4,16,32",Ws=32; pa=0
+3(b),"Ws; SR Wr=4,16,32",pd=0.1; pa=0
+4,"pa; SR Wr=4,16,32",Ws=32; pd=0.1
+5,"Timeout; SR Wr=4,16,32",Ws=32; pd=pa=0.1
+6,Ws; three error cases,"N=100; SR Wr=4,16,32"
+7,"Ws; N=10,1000","pd=pa=0.05; SR Wr=4,16,32"
