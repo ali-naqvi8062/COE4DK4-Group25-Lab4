@@ -58,6 +58,11 @@ and generator are included for editing. Report tables are also saved as CSV
 files under `tables/`. The separate submission archive is
 `output/COE4DK4_Group25_Lab4_Code.zip`.
 
+For submission of code without generated results, use
+`output/COE4DK4_Group25_Lab4_Code_Only.zip`. It contains the simulator,
+experiment and verification scripts, plotting scripts, and run instructions.
+Rebuild it with `python scripts/package_code.py`.
+
 An editable Word copy is available at
 `output/docx/COE4DK4_Group25_Lab4_Report.docx`. Regenerate it with
 `python scripts/word_report.py`. Text and tables are editable; plots are
